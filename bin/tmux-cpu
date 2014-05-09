@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+var fs = require('fs'),
+    print = require('../index.js'),
+    opts = require('yargs')
+    .options({
+        'help': { },
+        'version': { },
+        'ascii': { },
+        'format': { 'default': '#[fg=:color][:spark] :load :percent #[default][:spark5] :load5 :percent5 #[fg=black,bold][:spark15] :load15 :percent15' },
+        'width': { 'default': 5 },
+        'tty': { 'default': process.stdout.isTTY },
+        'color': { 'default': true }
+    })
+    .boolean('help')
+    .boolean('version')
+    .boolean('ascii')
+    .boolean('tty')
+    .boolean('color'),
+    argv = opts.parse(process.argv);
+
+var fmt = false;
+
+if(argv['version'] || argv['v'] ) {
+  console.log(require('../package.json').version);
+  process.exit();
+}
+
+if(argv['help']) {
+  return fs.createReadStream(__dirname + '/usage.txt').pipe(process.stdout).on('close', function () { process.exit(1) });
+}
+
+if(argv['ascii']) {
+  argv['format'] = '#[fg=:color][:bar] :load :percent #[default][:bar5] :load5 :percent5 #[fg=black,bold][:bar15] :load15 :percent15';
+}
+
+if(argv['format']) {
+  fmt = argv['format'];
+}
+
+print(fmt, argv['width'], argv['tty'], argv['color']);

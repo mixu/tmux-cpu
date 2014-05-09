@@ -1,0 +1,35 @@
+{
+  "name": "tmux-cpu",
+  "version": "0.0.0",
+  "description": "Display memory usage in your tmux status bar or in the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "tmux-cpu": "./bin/tmux-cpu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mixu/tmux-cpu.git"
+  },
+  "keywords": [
+    "tmux",
+    "memory",
+    "ram",
+    "ascii",
+    "status"
+  ],
+  "author": "Mikito Takada <mikito.takada@gmail.com> (http://mixu.net/)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mixu/tmux-cpu/issues"
+  },
+  "homepage": "https://github.com/mixu/tmux-cpu",
+  "dependencies": {
+    "bytes": "1.0.x",
+    "textspark": "0.1.x",
+    "yargs": "1.2.x",
+    "tmux-colors": "0.0.1"
+  }
+}
