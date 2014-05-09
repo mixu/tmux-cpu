@@ -44,7 +44,7 @@ tmux uses a custom format for specifying colors, which is different from the set
 
 where attributes are a comma-separated list of 'fg=color' and 'bg=color', for example:
 
-#[fg=yellow,bold]Yellow bold#[default] Gray
+    #[fg=yellow,bold]Yellow bold#[default] Gray
 
 Attributes may a comma-delimited list of one or more of: bright (or bold), dim, underscore, blink, reverse, hidden, or italics.
 
