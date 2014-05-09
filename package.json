@@ -30,6 +30,6 @@
     "bytes": "1.0.x",
     "textspark": "0.1.x",
     "yargs": "1.2.x",
-    "tmux-colors": "0.0.1"
+    "tmux-colors": "0.0.x"
   }
 }
