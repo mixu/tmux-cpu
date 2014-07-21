@@ -10,8 +10,9 @@ function escapeRegExp(string) {
 function bar(opts) {
   var ratio = opts.current / opts.total,
       width = opts.width || 10,
-      complete = Array(Math.round(width * ratio)).join('='),
-      incomplete = Array(width - complete.length).join(' ');
+      complete = new Array(Math.min(Math.round(width * ratio), width)).join('=');
+
+  var incomplete = new Array(Math.max(0, width - complete.length)).join(' ');
 
   return complete + incomplete;
 }
