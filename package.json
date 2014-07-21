@@ -1,6 +1,6 @@
 {
   "name": "tmux-cpu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Display memory usage in your tmux status bar or in the terminal",
   "main": "index.js",
   "scripts": {
