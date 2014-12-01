@@ -10,7 +10,7 @@ Install Node, then use npm:
 
 ## Example
 
-Here's how my tmux status bar looks like. This uses both `[tmux-cpu](https://github.com/mixu/tmux-cpu)` and `[tmux-mem](https://github.com/mixu/tmux-mem)`: 
+Here's how my tmux status bar looks like. This uses both [`tmux-cpu`](https://github.com/mixu/tmux-cpu) and [`tmux-mem`](https://github.com/mixu/tmux-mem): 
 
 ![Example](https://raw.githubusercontent.com/mixu/tmux-cpu/master/tmux.png)
 
